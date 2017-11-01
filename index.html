@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PSK Introduction</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./css/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+# PSK Data mode
+
+## Martin Murphy - EI2HIB
+### 2017-08-28 
+
+</script></section><section  data-markdown><script type="text/template">
+
+# PSK
+
+* Teletype mode
+* PSK31 designed for typing speed
+* Data converted to audio to be sent
+* Encoded using Binary Phase Shift Keying
+* approx 31 baud
+* variable bits per character
+* most common characters are shorter
+* lowercase is shorter
+
+</script></section><section  data-markdown><script type="text/template">
+
+# Software
+* fldigi
+* hrd
+* others
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+# Macros
+* you can type, most people use macros
+* &lt;TX&gt; CQ CQ CQ DE EI2HIB EI2HIB PSE K&lt;RX&gt;
+* lowercase is faster to send
+* &lt;TX&gt; cq cq cq de ei2hib ei2hib pse k&lt;RX&gt;
+
+</script></section><section data-markdown><script type="text/template">
+# Macros 2
+* Configure software with your details:
+  * MYNAME = Martin
+  * MYCALL = EI2HIB
+  * MYQTH = Tramore, Ireland
+  * MYLOC = IO62kd
+* &lt;TX&gt; cq cq cq de &lt;MYCALL&gt; &lt;MYCALL&gt; pse k&lt;RX&gt;
+
+</script></section><section data-markdown><script type="text/template">
+# Macros 3
+* Configure software with your details:
+  * MYNAME = Martin
+  * MYCALL = EI2HIB
+  * MYQTH = Tramore, Ireland
+  * MYLOC = IO62kd
+* &lt;TX&gt; &lt;YOURCALL&gt; de &lt;MYCALL&gt; &lt;MCALL&gt; kn&lt;RX&gt;
+
+</script></section><section data-markdown><script type="text/template">
+# Macros 4
+* Configure software with your details:
+  * MYNAME = Martin
+  * MYCALL = EI2HIB
+  * MYQTH = Tramore, Ireland
+  * MYLOC = IO62kd
+* &lt;TX&gt; &lt;YOURCALL&gt; rsq: &lt;RSTOUT&gt; &lt;RSTOUT&gt; name: &lt;MYNAME&gt; qth: &lt;MYQTH&gt; loc: &lt;MYLOC&gt;&lt;RX&gt;
+
+</script></section></section><section  data-markdown><script type="text/template">
+
+# Radio setup
+* Disable any audio processing
+* Disable auto gain control
+
+</script></section><section  data-markdown><script type="text/template">
+
+# Tips
+* watch first, see how QSOs are working
+* probably best to initially just answer someones call
+* When you've done that for a while try CQ
+* Check on pskreporter.info if you've been heard
+
+</script></section><section  data-markdown><script type="text/template">
+
+# Questions?
+## Martin Murphy - EI2HIB
+### 2017-08-28 
+
+</script></section><section  data-markdown><script type="text/template">
+
+# References
+
+* [pskreporter](https://www.pskreporter.info/)
+* [fldigi](http://www.w1hkj.com/)
+* [SEARG](http://www.searg.ie)
+* [Presentation Template](https://github.com/martinmurphy/slidestemplate)
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"fade"};
+            options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
+            Reveal.initialize(options);
+        </script>
+    </body>
+</html>
