@@ -1,6 +1,6 @@
 # Presentation: PSK Introduction
 
-Introduction tot he PSK31 data mode.  Initially presented on 2017-08-28
+Introduction to the PSK31 data mode.  Initially presented on 2017-08-28
 
 [Presentation](https://martinmurphy.github.io/pskintro)
 
